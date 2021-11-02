@@ -1,0 +1,40 @@
+TASK
+There is a file which contains temperatures in Celsius or Fahrenheit for given cities and dates. The strings representing temperatures are expected to look like this: 10F or -15 C. The date/time strings are expected to conform to ISO 8601.
+Write a Python program which:
+• asks the user for the name of the input file
+• asks the user for the name of the output file
+• reads all records from the input file
+• converts each temperature to Fahrenheit if it is in Celsius
+• converts all dates to the local timezone
+• writes the converted values in the output file
+The input and output files can be either CSV or JSON array (see the examples on the next page).
+Your solution should be provided as a single ZIP archive of:
+• source code incl. unit tests
+• code coverage information (https://coverage.readthedocs.io)
+• requirements.txt for pip if needed
+• brief documentation if needed (readme.md) - e.g. how to run the code
+• anything else you consider important
+Hint: Small things matter. This task is designed to test not only your knowledge of Python, but also more importantly, how good you are at programming.
+
+
+SAMPLE CSV
+Sofia, 2021-08-01T13:00:00+02:00, 33C
+Varna, 2021-08-01T11:45:00Z,25 C
+
+SAMPLE JSON
+[
+{
+"city": "Sofia",
+"date": "2021-08-01T13:00:00+02:00",
+"temp": "33C"
+},
+{
+"city": "Varna",
+"date": "2021-08-01T11:45:00Z",
+"temp": "25 C"
+}
+]
+
+SAMPLE OUTPUT CSV
+Sofia,2021-08-01 14:00:00+03:00,91F
+Varna,2021-08-01 14:45:00+03:00,77F
